@@ -1,0 +1,4 @@
+#;Asunto;Tipo;Estado
+34326;OPORTUNIDADES >>> El filtro por fecha estimada de decisi�n no funciona correctamente;Tarea;Cerrada
+33879;"VENTAS >>> COMISIONES. Liberar para que no sea obligatorio el campo ""rango"" configuracion comisi�n art�culo";Tarea;Cerrada
+23211;LISTADOS >>> Listado de recibos de ventas y compras. Crear un estado de recibos pendientes y anticipos sin factura;Tarea;Cerrada

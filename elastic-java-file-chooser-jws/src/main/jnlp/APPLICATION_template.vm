@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+" codebase="*" version="*" href="*">
+
+  <information>
+  		<title>$jnlptitle</title> 
+  		<vendor>$jnlpvendor</vendor> 
+ 		<homepage href="$jnlphomepagehref" /> 
+  		<description>$jnlpdescription</description> 
+  		<description kind="short">$jnlpdescriptionshort</description> 
+  		<icon href="$jnlpiconhref"/> 
+  		<icon kind="shortcut" href="$jnlpiconshorcut"/>  
+  		<shortcut online="true" install="true">
+       		<desktop/>
+    		<menu submenu="$jnlpsubmenu"/>
+  		</shortcut>  	
+  </information>
+  
+  <update check="always" policy="always"/>
+
+  <security>
+  	<all-permissions/> 
+  </security>
+  
+	<resources arch="x86">
+    	<j2se version="1.8+" href="http://java.sun.com/products/autodl/j2se" initial-heap-size="$jnlpjavainitialheap" max-heap-size="1024m" java-vm-args="$jnlpjavavmargs"/> 				
+	</resources>
+	
+	<resources arch="x86_64">
+    	<j2se version="1.8+" href="http://java.sun.com/products/autodl/j2se" initial-heap-size="$jnlpjavainitialheap" max-heap-size="$jnlpjavamaxheap" java-vm-args="$jnlpjavavmargs"/> 				 		
+	</resources>
+	
+	<resources arch="amd64">
+    	<j2se version="1.8+" href="http://java.sun.com/products/autodl/j2se" initial-heap-size="$jnlpjavainitialheap" max-heap-size="$jnlpjavamaxheap" java-vm-args="$jnlpjavavmargs"/> 				 		
+	</resources>
+	
+	<resources>
+		$dependencies
+	</resources>
+	
+	<application-desc main-class="$mainClass">
+	</application-desc>
+</jnlp>

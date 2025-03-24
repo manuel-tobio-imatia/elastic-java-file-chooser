@@ -1,0 +1,6 @@
+#;Asunto;Tipo;Estado
+315;Clonado presupuestos y pedidos -> Mantener importes;Nueva funcionalidad;Resuelta
+242;En el �rbol de trazabilidad a�adir la raz�n social en los documentos - Tons;Nueva funcionalidad;Resuelta
+212;Nos e puede catalogar las direcciones desde cuenta.;Nueva funcionalidad;Resuelta
+208;No coge el BIC / SIWFT - Tons;Nueva funcionalidad;Resuelta
+103;Listado de rentabilidad;Errores;Cerrada/Actualizada

@@ -1,0 +1,16 @@
+#;Asunto;Tipo;Estado
+34926;ALMAC�N >>> GESTION DE INVENTARIO. Poner unidad;Tarea;Cerrada
+34901;ALMACEN. Configuraci�n del modo de entrada a las ubicaciones;Mejora;Cerrada
+35100;APLICACI�N >>> CONFIGURACI�N >> MONEDAS >> Cambiar el nombre de una columna en la tabla de monedas;Tarea;Cerrada
+34845;CRM >>> PREVISIONES. Marcar por defecto por fechas;Tarea;Cerrada
+34958;FINANZAS >>> SUBCUENTAS. Ampliar tama�o campos de IVA y RE;Mejora;Cerrada
+35009;GENERAL >> Estandarizar los colores especiales de las filas de las tablas;Mejora;Cerrada
+32977;GENERAL >>> Mejorar la ergonom�a de ejecuci�n en autom�tico de apuntes y posterior contabilizaci�n;Tarea;Cerrada
+33721;GENERAL >>> Modificaci�n de iconos;Tarea;Cerrada
+34917;VENTAS >>> ORDEN DE PICKING. A�adir check de prioritario;Mejora;Cerrada
+34924;VENTAS >>> ORDEN DE PREPARACION. Cambiar el origen de datos de valor bultos;Tarea;Cerrada
+34921;VENTAS >>> ORDEN DE PREPARACION. Ordenar las ordenes de preparaci�n orden inverso. Las m�s antiguas arriba;Mejora;Cerrada
+34916;VENTAS >>> PEDIDO. Que avise de que alguna l�nea le falta peso;Mejora;Cerrada
+35082;VENTAS >>> PRESUPUESTOS >> BUSCADOR DE ART�CULOS. Seleccionar tarifa por defecto del sistema;Tarea;Cerrada
+34851;VENTAS >>> PRESUPUESTOS >>>Buscador art�culos->No deja seleccionar tarifa si es cliente potencial;Tarea;Cerrada
+34333;VENTAS >>> PROFORMAS AVANZADAS. Permitir crear proforma de un cliente potencial;Mejora;Cerrada

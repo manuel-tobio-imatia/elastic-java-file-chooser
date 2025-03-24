@@ -1,0 +1,85 @@
+A {
+	font-size: 12px;
+	text-decoration: none;
+	font-style: italic;
+	font-weight: bold;
+	color: #000000;
+}
+
+A:active {
+	font-size: 12px;
+	text-decoration: none;
+	font-style: italic;
+	font-weight: bold;
+	color: #000000;
+}
+
+A:visited {
+	font-size: 12px;
+	text-decoration: none;
+	font-style: italic;
+	font-weight: bold;
+	color: #000000;
+}
+
+A:hover {
+	font-size: 12px;
+	text-decoration: none;
+	font-style: italic;
+	font-weight: bold;
+	color: #000000;
+}
+
+html, body {
+	height: 100%;
+	font-family: 'Century Gothic';
+	margin: 0pt;
+}
+
+.background {
+	background-size: 100% 100%;
+	min-height: 100%;
+}
+
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -150px;
+}
+
+#header {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	background-color: #000;
+}
+
+.rTable {
+	display: table;
+	width: 100%;
+}
+
+.rTableRowSpace {
+	display: table-row;
+	text-align: center;
+	align: center;
+	line-height: 3em;
+}
+
+#downloadImages {
+	display: table-row;
+	text-align: center;
+	align: center;
+	padding: 100px;
+}
+
+#footer {
+	display: flex;
+	justify-content: space-between;
+	background-color: #dddddd;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}

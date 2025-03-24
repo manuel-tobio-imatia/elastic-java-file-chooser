@@ -1,0 +1,86 @@
+#;Asunto;Tipo;Estado
+22367;ALMAC�N >>> Ampliar tama�o campos de PP y Rappel en ficha de articulo;Mejora;Cerrada
+22016;ALMAC�N >>> A�adir columna empresa a las tablas de entradas, salidas, traspasos y regularizaciones;Tarea;Cerrada
+29796;"ALMAC�N >>> ART�CULOS >> Bloquear el combo ""Modelo de costes"" en los art�culos";Mejora;Cerrada
+31850;ALMACEN >>> FAMILIA >>> ARTICULO. Error al visualizar el c�digo de articulo;Tarea;Cerrada
+31851;ALMACEN >>> FAMILIA. A�adir un indicativo de si la familia es trazable;Tarea;Cerrada
+23105;ALMAC�N >>> FAMILIAS. A�adir adjuntos en las familias;Tarea;Cerrada
+22208;ALMAC�N >>> FAMILIAS. Check por defecto al asignar modelo de costes;Tarea;Cerrada
+22860;ALMAC�N >>> GESTI�N DE CONSIGNA DE PROVEEDORES. Ir al pedido tras generarlo;Mejora;Cerrada
+22975;ALMAC�N >>> Modificar el comportamiento del check Ignorar stock;Tarea;Cerrada
+22366;ALMAC�N >>> No me deja editar los t�tulos de las caracteristicas de articulos;Mejora;Cerrada
+22960;ALMAC�N >>> REGULARIZACIONES. No permitir cambiar la fecha de la regularizaci�n;Tarea;Cerrada
+22388;ART�CULOS >>> PAR�METROS. Par�metros->Unificar las dos tablas de par�metros;Mejora;Cerrada
+33076;CALIDAD >>> ENSAYOS DE CALIDAD. Genera una funci�n que sea validar y quita de cuarentena a la vez;Tarea;Cerrada
+33953;Cambiar el tama�o de la fuente por defecto a 12;Tarea;Cerrada
+31842;COMPRAS >>> CALCULAR NECESIDADES PEDIDO. A�adir seleccionador masivo;Tarea;Cerrada
+31917;COMPRAS >>> EVALUACI�N de PROVEEDORES. Poder seleccionar masivamente o desseleccioanr;Tarea;Cerrada
+23049;COMPRAS >>> GESTI�N DE PAGOS. Pagar�s->A�adir el nombre comercial;Tarea;Cerrada
+23151;COMPRAS >>> NECESIDADES. Modificar la manera de calcular las necesidades de compra;Tarea;Cerrada
+22310;COMPRAS >>> Se deben poder crear presupuestos, pedidos, albaranes y facturas de proveedores en cuarentena;Tarea;Cerrada
+23137;COMPRAS Y VENTAS >>> A�adir en los listados de recibos si el recibo fue devuelto;Tarea;Cerrada
+23046;COMPRAS Y VENTAS >>> A�adir nombre comercial en listados de recibos;Tarea;Cerrada
+23016;COMPRAS Y VENTAS >>> Evitar que se arrastren los ficheros entre documentos;Mejora;Cerrada
+21975;CRM >>> Desglosar en dos entradas diferentes la entrada actual de oportunidades;Tarea;Cerrada
+21978;CRM >>> Nueva entrada oportunidades.;Tarea;Cerrada
+22416;"CRM >>> OPORTUNIDADES Y PREVISI�N. Poner bot�n ""Mostrar datos""";Tarea;Cerrada
+31535;CRM >>> Segmentaci�n->No se puede acceder a la ficha;Tarea;Cerrada
+23001;EMPRESA >>> EMPLEADO. Controlar vacaciones de manera separado de incidencias;Tarea;Cerrada
+33078;FAMILIA >>> Bajar Check de alta en cuarentena a nivel articulo.;Tarea;Cerrada
+23150;FINANZAS >>> Acceso r�pido a mayor desde ficha de cliente y proveedor;Tarea;Cerrada
+31226;FINANZAS >>> Activos fijos. Salen los de baja en los no amortizados;Tarea;Cerrada
+22924;FINANZAS >>> El proceso de borrado de un asiento tarda mucho cuando tiene varias partidas;Mejora;Cerrada
+22836;FINANZAS >>> IMPRESIONES. No manda el locale del cliente;Tarea;Cerrada
+33556;FINANZAS >>> INFORMES. Crear campo observaciones;Mejora;Cerrada
+33564;FINANZAS >>> INFORMES. Facturas recibidas. No pinta bien el IVA;Mejora;Cerrada
+33557;FINANZAS >>> INFORMeS. Libro diario. Cambiar el t�tulo;Mejora;Cerrada
+22203;FINANZAS >>> Modelo 349. Eliminar filtro de 3005,60;Tarea;Cerrada
+23017;FINANZAS >>>LIBRO DIARIO. A�adir el filtro desde n� asiento a n� de asiento;Tarea;Cerrada
+22406;GENERAL >>> A�adir las traducciones en franc�s;Tarea;Cerrada
+31044;GENERAL >>> Aumentar el tama�o del campo NIF a 18;Tarea;Cerrada
+32286;GENERAL >>> Cambiar la propiedad que controla como se entra en los campos para editar;Tarea;Cerrada
+30920;GENERAL >>> Cambiar la traducci�n de CIF para que aparezca s�lo NIF;Mejora;Cerrada
+23048;GENERAL >>> CONSULTAS SQL. A�adir par�metros a la consulta para que el usuario pueda introducir los valores;Tarea;Cerrada
+22974;GENERAL >>> En la configuraci�n del email de salida del usuario se debe poder configurar el puerto;Tarea;Cerrada
+30980;GENERAL >>> Importaci�n de datos desde XLSX;Mejora;Cerrada
+30504;GENERAL >>> Mejorar el bot�n de importaci�n para que no aparezca siempre;Mejora;Cerrada
+22380;GENERAL >>> Poner el simbolo de >=< segun corresponda;Mejora;Cerrada
+33094;GENERAL >>> Revisar iconos de las tablas/formularios para que sean todos del mismo tama�o;Mejora;Cerrada
+33562;IMPRESIONES >>> ENV�O POR MAIL. Siempre activo;Tarea;Cerrada
+31030;LABORAL >>> A�adir el estado de pendiente de aceptaci�n en las vacaciones;Tarea;Cerrada
+22968;LABORAL >>> Eliminar de la tabla las fechas de los d�as de vacaciones.;Mejora;Cerrada
+33755;LABORAL >>> EMPLEADO. A�adir campo para email personal;Tarea;Cerrada
+30864;LISTADOS >>> ALMAC�N. Modificar los dos listados actuales de  coste por programaci�n y orden incluyendo lso costes reales;Mejora;Cerrada
+32923;LISTADOS >>> Que se puedan encoger los filtros b�sicos;Tarea;Cerrada
+22061;LISTADOS >>> VENTAS >>>PRESUPUESTOS >>>Resumen y resumen con margen;Tarea;Cerrada
+22220;PRODUCCI�N >> �RDENES Al mover detalles s�lo se deber�a dejar seleccionar uno de los dos combos;Mejora;Cerrada
+22662;PRODUCCI�N >>> DESPIECE PARAM�TRICOS. No se pueden relacionar par�metros diferentes;Tarea;Cerrada
+22115;PRODUCCI�N >>> INSTALACIONES >> OPERACIONES. Poner editables los campos de configuraci�n de la operaci�n en los art�culos;Mejora;Cerrada
+22320;PRODUCCI�N >>> No visualizar el n�mero de ejecuci�n de las �rdenes;Mejora;Cerrada
+22303;PRODUCCI�N >>> �RDENES. Nuevas columnas en la pesta�a de materiales;Tarea;Cerrada
+23063;SEPA >>> Modificar para permitir el tipo COR1;Tarea;Cerrada
+22700;VENTAS  >>> Migraci�n cuaderno C58 a Sepa Core / B2B;Tarea;Cerrada
+22378;VENTAS >>> Agrupar todo lo de recibos en una sola entrada en el desplegable;Mejora;Cerrada
+32085;VENTAS >>> ALBARANES. A�adir la columna de agrupar facturaci�n al formulario de entrada de albaranes no facturados;Tarea;Cerrada
+22375;VENTAS >>> ALBARANES. Poner la tabla de albaranes de abono en una nueva pesta�a;Mejora;Cerrada
+22368;VENTAS >>> A�adir campos a la tabla de mandatos;Mejora;Cerrada
+22351;VENTAS >>> Asignaci�n de clientes existentes a una nueva empresa;Mejora;Cerrada
+22692;VENTAS >>> Buscador art�culos->Art�culos de cliente->Cambiar para que salga el precio del escalonado;Tarea;Cerrada
+23135;VENTAS >>> CLIENTE POTENCIAL. Establecer el IVA de presupuesto para potenciales desde el tipo de Cliente...;Tarea;Cerrada
+22462;VENTAS >>> CLIENTES >> GRUPOS. Cambiar etiquetas de las columnas de la tabla de cliente del grupo;Mejora;Cerrada
+32289;VENTAS >>> Configuraci�n de rappel. ;Tarea;Cerrada
+22952;VENTAS >>> Dejar cambiar el CIF de cliente  y trasladarlo a las facturas ya generadas;Mejora;Cerrada
+31357;VENTAS >>> En potenciales no hay idioma preconfigurado;Mejora;Cerrada
+22958;VENTAS >>> FACTUIRAS. L�nea de IVA igual que en compras;Tarea;Cerrada
+33095;VENTAS >>> FACTURAS. En la factura nos permite a�adir albaranes de distintos clientes solicitantes;Tarea;Cerrada
+22292;VENTAS >>> FACTURAS. Permitir modificar las condiciones de pago aunque tenga apuntes;Tarea;Cerrada
+30394;VENTAS >>> FACTURAS. Poder crear l�neas de s�lo iva en facturas de ventas;Tarea;Cerrada
+22247;VENTAS >>> Generaci�n de fichero electr�nico para env�o de pagar�s;Tarea;Cerrada
+22358;VENTAS >>> Limitar el articulo para facturaci�n de rappel a art�culo servicios;Mejora;Cerrada
+22300;VENTAS >>> Mejorar visualizaci�n de los combos de comerciales;Tarea;Cerrada
+23157;VENTAS >>> PEDIDOS. A�adir campo base pendiente de servir en pedidos;Mejora;Cerrada
+22540;"VENTAS >>> PEDIDOS. Poner el campo ""Importe minimo de venta"" en la cabecera de los pedidos";Mejora;Cerrada
+31352;VENTAS >>> Poder caducar tarifas masivamente.;Mejora;Cerrada
+22949;VENTAS >>> REMESAS. Mostrar en los recibos si tiene mandato vigente;Tarea;Cerrada
+32370;VENTAS >>> TARIFAS. Precargar por defecto la unidad ;Tarea;Cerrada
+21990;VENTAS >>>Pedidos->Expedido pedido con l�nea con cantidad 0;Mejora;Cerrada

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <parent>
+      <groupId>com.imatia.elastic</groupId>
+      <artifactId>elastic-java-file-chooser</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+   </parent>
+   <artifactId>elastic-java-file-chooser-war</artifactId>
+   <packaging>pom</packaging>
+
+   <build>
+      <resources>
+         <resource>
+            <directory>src/main/resources</directory>
+            <filtering>true</filtering>
+         </resource>
+      </resources>
+   </build>
+
+   <profiles>
+      <profile>
+         <id>generate-jnlp</id>
+         <activation>
+         </activation>
+         <build>
+            <finalName>${tomcat.app.name}</finalName>
+            <plugins>
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-dependency-plugin</artifactId>
+                  <executions>
+                     <!-- copiamos la parte del webstart -->
+                     <execution>
+                        <id>copy webstart</id>
+                        <!-- Copy the webstart bundle in as a resource before
+                           packaging starts. -->
+                        <phase>process-resources</phase>
+                        <goals>
+                           <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                           <artifactItems>
+                              <artifactItem>
+                                 <groupId>${project.groupId}</groupId>
+                                 <artifactId>elastic-java-file-chooser-jws</artifactId>
+                                 <version>${projectVersion}</version>
+                                 <type>zip</type>
+                              </artifactItem>
+                           </artifactItems>
+                           <outputDirectory>${project.build.directory}\${project.build.finalName}\webstart</outputDirectory>
+                        </configuration>
+                     </execution>
+                     <!-- copiamos las classes del servidor -->
+                     <execution>
+                        <id>copy-classes</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                           <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                           <artifactItems>
+                              <artifactItem>
+                                 <groupId>${project.groupId}</groupId>
+                                 <artifactId>elastic-java-file-chooser-server</artifactId>
+                                 <version>${projectVersion}</version>
+                                 <type>jar</type>
+                              </artifactItem>
+                           </artifactItems>
+                           <outputDirectory>${project.build.directory}\${project.build.finalName}\WEB-INF\classes</outputDirectory>
+                        </configuration>
+                     </execution>
+                     <!-- copiamos las dependencias del servidor -->
+                     <execution>
+                        <id>copy-dependencies</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                           <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                           <artifactItems>
+                              <artifactItem>
+                                 <groupId>${project.groupId}</groupId>
+                                 <artifactId>elastic-java-file-chooser-server</artifactId>
+                                 <version>${projectVersion}</version>
+                                 <type>jar</type>
+                              </artifactItem>
+                           </artifactItems>
+                           <outputDirectory>${project.build.directory}\${project.build.finalName}\WEB-INF\lib</outputDirectory>
+                        </configuration>
+                     </execution>
+                  </executions>
+               </plugin>
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-resources-plugin</artifactId>
+                  <executions>
+                     <!-- copiamos el web.xml -->
+                     <execution>
+                        <id>copy-resources</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                           <goal>resources</goal>
+                        </goals>
+                        <configuration>
+                           <outputDirectory>${project.build.directory}\${project.build.finalName}\WEB-INF</outputDirectory>
+                        </configuration>
+                     </execution>
+                     <!-- copiamos la licencia -->
+                     <execution>
+                        <id>copy-license</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                           <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                           <outputDirectory>${project.build.directory}\${project.build.finalName}\WEB-INF\classes</outputDirectory>
+                           <overwrite>true</overwrite>
+                           <resources>
+                              <resource>
+                                 <directory>warresources</directory>
+                                 <includes>
+                                    <include>license.dat</include>
+                                 </includes>
+                              </resource>
+                           </resources>
+                        </configuration>
+                     </execution>
+                     <!-- copiamos el index.jsp -->
+                     <execution>
+                        <id>copy-index-jsp</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                           <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                           <outputDirectory>${project.build.directory}\${project.build.finalName}</outputDirectory>
+                           <overwrite>true</overwrite>
+                           <resources>
+                              <resource>
+                                 <directory>warresources</directory>
+                                 <includes>
+                                    <include>index.jsp</include>
+                                 </includes>
+                              </resource>
+                           </resources>
+                        </configuration>
+                     </execution>
+                  </executions>
+               </plugin>
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-antrun-plugin</artifactId>
+                  <executions>
+                     <execution>
+                        <id>unsign-jars</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                           <goal>run</goal>
+                        </goals>
+                        <configuration>
+                           <target>
+                              <property name="lib" value="${project.build.finalName}" />
+                              <typedef resource="net/sf/antcontrib/antlib.xml">
+                                 <classpath refid="maven.dependency.classpath" />
+                              </typedef>
+                              <echo message="Unsigned server jars" />
+                              <ant target="execute" />
+                              <echo message="Delete the server jar" />
+                              <delete>
+                                 <fileset dir="${project.build.directory}\${project.build.finalName}\WEB-INF\lib">
+                                    <include name="elastic-java-file-chooser-server-${project.version}.jar" />
+                                 </fileset>
+                              </delete>
+                              <war destfile="${project.build.directory}\${project.build.finalName}.war">
+                                 <fileset dir="${project.build.directory}\${project.build.finalName}" />
+                              </war>
+                           </target>
+                        </configuration>
+                     </execution>
+                  </executions>
+               </plugin>
+
+               <!-- <plugin> <artifactId>maven-war-plugin</artifactId> <executions>
+                  <execution> <phase>package</phase> <goals> <goal>war</goal> </goals> </execution>
+                  </executions> <configuration> <outputDirectory>${project.build.directory}</outputDirectory>
+                  <warName>${project.build.finalName}</warName> <attachClasses>false</attachClasses>
+                  <filteringDeploymentDescriptors>true</filteringDeploymentDescriptors> >In
+                  version 2.1-alpha-1, this was incorrectly named warSourceExcludes <packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
+                  Use this to include a selection of jars that will be included in the WAR
+                  <packagingIncludes>**/*.xml,**/*.properties,**/*.png,**/*.css,**/*.js,**/*.jsp</packagingIncludes>
+                  <archive> <manifest> <addClasspath>false</addClasspath> <classpathPrefix>lib/</classpathPrefix>
+                  </manifest> </archive> </configuration> </plugin> -->
+               <!-- Evitar el despliegue de los WAR en el repositorio corporativo -->
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-deploy-plugin</artifactId>
+                  <configuration>
+                     <skip>true</skip>
+                  </configuration>
+               </plugin>
+            </plugins>
+
+            <pluginManagement>
+               <plugins>
+                  <!--This plugin's configuration is used to store Eclipse
+                     m2e settings only. It has no influence on the Maven build itself. -->
+                  <plugin>
+                     <groupId>org.eclipse.m2e</groupId>
+                     <artifactId>lifecycle-mapping</artifactId>
+                     <version>1.0.0</version>
+                     <configuration>
+                        <lifecycleMappingMetadata>
+                           <pluginExecutions>
+                              <pluginExecution>
+                                 <pluginExecutionFilter>
+                                    <groupId>org.apache.maven.plugins</groupId>
+                                    <artifactId>maven-dependency-plugin</artifactId>
+                                    <versionRange>[1.0,)</versionRange>
+                                    <goals>
+                                       <goal>unpack</goal>
+                                    </goals>
+                                 </pluginExecutionFilter>
+                                 <action>
+                                    <ignore></ignore>
+                                 </action>
+                              </pluginExecution>
+                           </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                     </configuration>
+                  </plugin>
+               </plugins>
+            </pluginManagement>
+         </build>
+      </profile>
+   </profiles>
+
+   <dependencies>
+      <dependency>
+         <groupId>${project.groupId}</groupId>
+         <artifactId>elastic-java-file-chooser-server</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>ant-contrib</groupId>
+         <artifactId>ant-contrib</artifactId>
+         <version>1.0b3</version>
+         <exclusions>
+            <exclusion>
+               <groupId>ant</groupId>
+               <artifactId>ant</artifactId>
+            </exclusion>
+         </exclusions>
+      </dependency>
+   </dependencies>
+</project>

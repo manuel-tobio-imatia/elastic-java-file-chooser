@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
+			by default -->
+		<encoder>
+			<pattern>%n%d [%thread] %-5level - %C. %M[%L] %n%msg%n%caller{5}%ex%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="MONITOR"
+		class="com.ontimize.util.logging.logback.ServerMonitorAppender">
+		<encoder>
+			<pattern>%n%d [%thread] %-5level - %C. %M[%L] %n%msg%n%caller{5}%ex%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<root level="error">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="MONITOR" />
+	</root>
+	
+</configuration>

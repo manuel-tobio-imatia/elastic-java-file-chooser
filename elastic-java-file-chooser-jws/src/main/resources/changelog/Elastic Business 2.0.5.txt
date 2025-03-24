@@ -1,0 +1,15 @@
+#;Asunto;Tipo;Estado
+32760;ALMAC�N >>> CONSIGNA. Mejorar la visualizaci�n de lo que hay en consigna;Tarea;Cerrada
+35303;ALMAC�N >>> Definir si el comportamiento actual de ventas de art�culos todav�a no producidos es suficiente.;Tarea;Cerrada
+35790;ALMAC�N >>> RESTRICCIONES DE PAR�METROS. A�adir valor por defecto al par�metro relacionado.;Tarea;Cerrada
+34098;CALIDAD >>> ENSAYOS. Poder poner generar autom�tico las de producci�n y compras por separado.;Mejora;Cerrada
+33558;FINANZAS >>> INFORMES. Facturas recibidas y facturas emitidas.;Mejora;Cerrada
+35737;GENERAL >>> CLIENTES Y PROVEEDORES. Configuraci�n por empresa;Tarea;Cerrada
+35940;GENERAL >>> Poder configurar los impuestos a nivel empresa en los clientes y proveedores;Tarea;Cerrada
+29937;LISTADOS >>> Revisi�n de listados para que la conexi�n no bloquee la base de datos;Tarea;Cerrada
+33898;PRODUCCI�N >>> DESPIECES >> Que el calculo de setup se calcule solo en base a mano de obra;Tarea;Cerrada
+35116;PRODUCCI�N >>> Detalle de la orden. Fabricaci�n parcial->Tarda en abrir el formulario;Mejora;Cerrada
+35310;PRODUCCI�N >>> GRUPOS DE PRODUCCI�N. Insertar empresa por defecto usuario o sistema al crear grupo de programaci�n;Tarea;Cerrada
+34097;PRODUCCI�N >>> PANTALLA DE SEGUIMIENTO >> Realizar multiples cambios;Tarea;Cerrada
+34911;VENTAS >>> PEDIDOS. Poner cantidad expedida en rojo;Mejora;Cerrada
+36426;VENTAS >>> TARIFAS. No aparece el codigo y descripci�n del articulo;Mejora;Cerrada

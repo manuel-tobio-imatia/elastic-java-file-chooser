@@ -1,0 +1,52 @@
+#;Asunto;Tipo;Estado
+936;EProdNecesidades->Eliminar la columna necessary_in_programming;Mejora;Resuelta
+934;Produccion->Programaciones->Generar necesidades;Errores;Resuelta
+933;Eliminar EAlmParametrosFijos;Mejora;Resuelta
+932;Art�culos->Mover art�culos->No cambian las versi�n en el plan maestro;Errores;Resuelta
+930;Impresiones de compras;Errores;Resuelta
+923;VENTAS >>>Facturas->Asientos;Errores;Resuelta
+920;Producci�n->Programaciones->Completa autom�ticamente cuando todas las �rdenes est�n completas;Nueva funcionalidad;Resuelta
+919;Compras->Albaranes->Proveedor de facturaci�n;Nueva funcionalidad;Resuelta
+916;Error estableciendo fecha de prevista de entrega en los pedidos de ventas;Errores;Resuelta
+911;Producci�n->Programaciones->A�adir la operaci�n en la pesta�a de �rdenes;Nueva funcionalidad;Resuelta
+908;VENTAS >>>Pedidos->Desbloquear F. Prev. Entrega;Nueva funcionalidad;Resuelta
+905;Fusionar las entidad EProdProgramacion y EProdProgramacionGrupo;Nueva funcionalidad;Resuelta
+903;Cambiar valor por defecto de las columnas PLANIFICABLE y INCLUIR_EN_PROG;Mejora;Resuelta
+902;Modificar GeneraNecesidades.generateOrder;Mejora;Resuelta
+899;LISTADOS >>>VENTAS >>>Cobros->Ageing detallado;Nueva funcionalidad;Resuelta
+898;Producci�n->Programaciones->A�adir pedidos;Nueva funcionalidad;Resuelta
+889;VENTAS >>>Buscador de art�culos->Tarifa obsoletas;Nueva funcionalidad;Resuelta
+888;VENTAS >>>Tarifas->Error al abrir tarifa obsoleta;Errores;Resuelta
+885;Producci�n->Programaciones->Poder generar �rdenes por art�culo;Nueva funcionalidad;Resuelta
+884;LISTADOS >>>VENTAS >>>Rentabilidad->Mostrar los kits como un art�culo m�s;Nueva funcionalidad;Resuelta
+880;Se debe revisar que en la entidades, las Update columns no contengan la clave;Mejora;Cerrada/Actualizada
+872;LISTADOS >>>VENTAS >>>Facturas->Resumen y resumen con margen;Nueva funcionalidad;Resuelta
+864;Pierde el comercial al pasar de potencial a cliente;Errores;Resuelta
+863;"Almac�n -> Familias -> no permitir cambiar el check ""Trazable"" si la familia ya tiene movimientos";Mejora;Resuelta
+850;Tablas->Mover filas y refrescar;Errores;Resuelta
+848;Cargarse la entidad EAlmVistaStockTotal;Mejora;Resuelta
+846;Produccion->Programaciones->Al lanzar plan maestro o necesidades se cuelga en el m�todo EProdProgramacionGrupo.almacenConNegativos;Nueva funcionalidad;Resuelta
+843;Faltan los bundles de ontimize en portugu�s;Nueva funcionalidad;Resuelta
+830;No coge el pronto pago correctamente;Errores;Resuelta
+808;Aplicaci�n->Configuraci�n->Tablas maestras->Series facturas;Errores;Resuelta
+807;VENTAS >>>Facturas no se pueden crear facturas si no hay contador configurable;Errores;Resuelta
+802;Salen duplicados los art�culos en el buscador de art�culos de ventas;Errores;Resuelta
+797;No deja guardar la modificaci�n del numero de albaran de proveedor;Errores;Resuelta
+779;El combo tipo de direcci�n tiene mascara;Errores;Resuelta
+777;Aparece con valro true o false en vez de check;Errores;Resuelta
+776;Cliente de baja o bloqueado en rojo;Mejora;Resuelta
+763;No bloquea la aplicaci�n;Errores;Resuelta
+762;No me funciona correctamente la configuraci�n de un men� especifico;Configuraci�n;Resuelta
+759;No permite modificar el peso de un pedido;Errores;Resuelta
+751;Actualizaciones FacturaE;Nueva funcionalidad;Resuelta
+735;Check binarios de las tablas de configuraci�n no funcionan;Errores;Resuelta
+731;Albaranes de venta -> poner como coste de la l�nea del lote;Nueva funcionalidad;Resuelta
+685;Al fabricar las �rdenes de producci�n con lotes, se queda un hilo en espera y no se puede seleccionar el lote;Errores;Resuelta
+642;No copia el coste en un alta manual de art�culos trazables;Errores;Resuelta
+637;Listado de valoraci�n de lotes;Nueva funcionalidad;Resuelta
+632;Actualizar valor de la descripci�n de art�culo en proveedores;Nueva funcionalidad;Resuelta
+625;"Falla la busqueda en el quick filter cuando se utiliza la ""coma""";Errores;Resuelta
+606;Permitir borrar consumos de �rdenes ya cerradas;Nueva funcionalidad;Resuelta
+506;No deja modificar l�nea con gastos planificados;Errores;Resuelta
+503;Eliminar formularios y tablas sobrantes del m�dulo de almac�n;Mejora;Resuelta
+313;Producci�n->Programaciones->Quitar pedidos o l�neas de pedidos cuando hay �rdenes lanzadas;Nueva funcionalidad;Resuelta

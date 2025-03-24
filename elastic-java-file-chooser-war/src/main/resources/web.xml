@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app id="WebApp_ID" version="2.4"
+   xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+   <display-name>Elastic Business</display-name>
+   <description>Servidor Elastic</description>
+
+   <!-- El servlet que se encarga de relanzar el servidor de aplicaciones -->
+   <servlet>
+      <description>Servlet para Iniciar el Servidor</description>
+      <servlet-name>ServerSpecificLauncher</servlet-name>
+      <servlet-class>com.imatia.elastic.servidor.ServerSpecificLauncher</servlet-class>
+      <init-param>
+         <param-name>ServerProperties</param-name>
+         <param-value>com/imatia/elastic/servidor/prop/server.properties</param-value>
+      </init-param>
+      <load-on-startup>1</load-on-startup>
+   </servlet>
+
+   <servlet>
+      <description>RMIServletHandler</description>
+      <servlet-name>RMIServletHandler</servlet-name>
+      <servlet-class>com.ontimize.util.rmitunneling.ServletHandler</servlet-class>
+      <init-param>
+         <param-name>ports</param-name>
+         <param-value>${server.port}</param-value>
+      </init-param>
+      <init-param>
+         <param-name>host</param-name>
+         <param-value>127.0.0.1</param-value>
+      </init-param>
+   </servlet>
+
+   <servlet-mapping>
+      <servlet-name>RMIServletHandler</servlet-name>
+      <url-pattern>/rmi</url-pattern>
+   </servlet-mapping>
+   <mime-mapping>
+      <extension>jnlp</extension>
+      <mime-type>application/x-java-jnlp-file</mime-type>
+   </mime-mapping>
+   <welcome-file-list>
+      <welcome-file>index.jsp</welcome-file>
+   </welcome-file-list>
+</web-app>

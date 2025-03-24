@@ -1,0 +1,4 @@
+#;Asunto;Tipo;Estado
+34231;CRM >>> Listado de oportunidades->Incluir la columna de divisi�n;Tarea;Cerrada
+34184;CRM >>> Oportunidades->Poder replegar la cabecera del formulario de oportunidades;Mejora;Cerrada
+34214;VENTAS >>> PEDIDO. A�adir n� de OP en el buscador de oportunidades;Tarea;Cerrada

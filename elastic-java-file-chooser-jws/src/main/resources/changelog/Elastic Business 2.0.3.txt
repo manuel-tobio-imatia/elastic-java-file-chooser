@@ -1,0 +1,12 @@
+#;Asunto;Tipo;Estado
+34438;ALMACEN >>> ORDEN DE UBICACION. A�adir campos al listado de entrada y en al cabecera de la orden de ubicaci�n;Tarea;Cerrada
+34439;ALMACEN >>> ORDENES DE UBICACI�N. Generar impresi�n ;Tarea;Cerrada
+34069;COMPRAS >>> GENERA FACTURA DESDE ALBARAN. Solicitar fecha factura y fecha contabilizaci�n;Tarea;Cerrada
+34319;CRM >>> OPORTUNIDADES. A�adir el tipo en los tabs;Tarea;Cerrada
+34223;CRM >>> OPORTUNIDADES. Campos de cuentas s�lo clientes y clientes potenciales;Tarea;Cerrada
+34442;FINANZAS >>>  Casaci�n C43. Mejoras;Mejora;Cerrada
+34468;IMPRESIONES >>> Flujo de ventas ( solo presupuesto, pedido y albar�n). a�adir en cabecera tipo de pedido y si es facturable);Tarea;Cerrada
+33853;IMPRESIONES >>> VENTAS. No pintar la fecha de ultima modificaci�n;Tarea;Cerrada
+34452;PRODUCCI�N >>> SUBCONTRATACION. Lanzar autom�ticamente la orden que se genera por la subcontrataci�n y no visibilizar en la pantalla de seguimiento;Tarea;Cerrada
+33884;VENTAS >>> FLUJO DE VENTAS. No recalcular precios cuando se clona si alguno es manual. ;Tarea;Cerrada
+34071;VENTAS >>> REMESAS. A�adir campo fecha de vencimiento en cabecera de remesa. ;Tarea;Cerrada

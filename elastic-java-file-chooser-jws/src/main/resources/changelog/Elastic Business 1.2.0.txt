@@ -1,0 +1,57 @@
+#;Asunto;Tipo;Estado
+793;Adaptar el modelo 347 al nuevo formato;Nueva funcionalidad;Resuelta
+790;Compras->Pedidos->Al pulsar el bot�n de actualizar se queda activo;Errores;Resuelta
+786;No avisa de que no hay stock suficiente cuando se mete las l�neas por inserci�n r�pida;Errores;Resuelta
+783;No cambai la fecha de vigencia de linea en las tarifas si cambias la de cabecera.;Errores;Resuelta
+780;Ver codigo de asociado al cliente;Mejora;Resuelta
+778;Establecer como empresa de facturaci�n la lider por defecto;Errores;Resuelta
+773;Calidad->No conformidades->Poder volver a abrir una no conformidad cerrada;Nueva funcionalidad;Resuelta
+768;No abre el gestor de mail;Duda;Resuelta
+767;Error refrescando el IVA y el recargo de equivalencia;Errores;Resuelta
+765;No carga el descuento PP de la configuraci�n tipo de cliente y proveedor;Errores;Resuelta
+764;No elimina la subcuenta contable de cliente;Errores;Resuelta
+758;Al clonar  no coge base de la tarifa;Errores;Resuelta
+748;Traducir campo;Mejora;Resuelta
+747;Traspasar el datos de DTO: PP al tipo de cliente / proveedor;Nueva funcionalidad;Resuelta
+745;Falla el control deDNI de  empleados;Errores;Resuelta
+744;Erro al querer eliminar un modelo de porte;Errores;Resuelta
+743;El codigo periodo deber�i establecerse autom�ticamente;Errores;Resuelta
+742;No formateado el campo;Errores;Resuelta
+741;Cambio de las descripci�n en la primera columna de tabals de configuraci�n;Mejora;Resuelta
+740;Valores repetidos en al tabals FINANZAS. Tabla con las administraciones de la AEAT.;Errores;Resuelta
+738;Muchas tablas de configuraci�n salen con los t�tulos sin traducir;Errores;Resuelta
+737;El componente de la l�nea de inserci�n r�pida no posiciona bien el foco;Errores;Resuelta
+736;Los titulos de la tabla de etapas de las campa�as esta sin traducir;Mejora;Resuelta
+734;Error en la edici�n del componente de inserci�n r�pida de lineas;Errores;Resuelta
+726;Error en los importes del listado 347;Errores;Resuelta
+711;C�digo y descripci�n externa en los art�culos de proveedor;Nueva funcionalidad;Resuelta
+651;Modificar listado resumen de cliente para que muestre la facturaci�n anual sin impuestos;Nueva funcionalidad;Resuelta
+650;Modificar el sistema de pendientes y reservados;Nueva funcionalidad;Resuelta
+645;Traspasar modificaciones de la configuraci�n a cliente o proveedor;Nueva funcionalidad;Resuelta
+643;Crear subcuentas al asignar una nueva empresa a cliente o proveedor;Nueva funcionalidad;Resuelta
+624;No puedo desasociar un anticipo de una factura;Errores;Resuelta
+623;No deja eliminar recibso de anticipos. ;Errores;Resuelta
+622;No deja fraccionar recibos negativos;Errores;Resuelta
+614;Error tipo de venta y compra al cambiar de a�o;Errores;Resuelta
+613;Error en el c�lculo de riesgo al pasar a pedido;Errores;Resuelta
+577;Ocultar tabla de n�meros de serie por propiedad;Errores;Resuelta
+519;No deja quitar de una factura de ventas un albar�n;Errores;Resuelta
+510;Empresa por defecto en el usuario;Nueva funcionalidad;Resuelta
+479;Error asignaci�n n� serie en �rdenes de preparaci�n;Errores;Resuelta
+472;Compatibilidad con MAC;Errores;Resuelta
+470;No coge la subcuenta del banco cuando el recibo fue creado e un a�o anterior;Errores;Resuelta
+468;Problema al crear m�ltiples versiones por detalle del plan maestro;Errores;Resuelta
+455;No recalcula bien comisiones;Errores;Resuelta
+433;Permitir programar art�culos de servicios;Nueva funcionalidad;Resuelta
+410;No deja eliminar recibos de anticipos;Nueva funcionalidad;Resuelta
+407;Error en las plantillas de los mails masivos de campa�a.;Errores;Resuelta
+383;Buscador art�culos de compras, todos los art�culos sale tarifas de otros proveedores;Errores;Resuelta
+381;Se est� dejando traspasar a ubicaciones de baja;Errores;Resuelta
+379;Recibos de compras, no se suman los gastos;Errores;Resuelta
+372;No avanza en n�mero de contador cuando se cuelga la aplicaci�n;Errores;Resuelta
+363;No se visualiza la condici�n dentro de una operaci�n de un despiece par�metrico;Errores;Resuelta
+340;Por defecto en empresa;Errores;Resuelta
+337;Fallo clonaci�n pedidos;Errores;Resuelta
+336;Cuenta bancaria de baja en cliente y sin embargo deja seleccionarla.;Errores;Resuelta
+335;No se activa el aceptar al clonar documentos de compras;Errores;Resuelta
+237;Mejora sistema impresi�n;Mejora;Resuelta

@@ -1,0 +1,10 @@
+#;Asunto;Tipo;Estado
+300;Poder editar el precio en los albaranes de abono;Nueva funcionalidad;Cerrada/Actualizada
+299;No anular pedidos con �rdenes de preparaci�n;Errores;Cerrada/Actualizada
+248;IArrowsTableEntity ;Mejora;Cerrada/Actualizada
+244;desde un presupeusto filtra mal las oportunidades;Errores;Cerrada/Actualizada
+210;A�adir comprobador de CIF en cuentas;Nueva funcionalidad;Cerrada/Actualizada
+194;Albar�n de abono no devuelve al almac�n del que han salido;Nueva funcionalidad;Cerrada/Actualizada
+190;Facturas de compras y ventas marcadas como pagadas o cobradas;Nueva funcionalidad;Cerrada/Actualizada
+68;Pasar botones de acciones a la tabla de versiones;Mejora;Cerrada/Actualizada
+56;LISTADOS >>>VENTAS >>>Listado de cliente potenciales;Nueva funcionalidad;Cerrada/Actualizada

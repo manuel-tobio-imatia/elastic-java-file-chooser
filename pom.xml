@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.imatia.elastic</groupId>
+	<artifactId>elastic-java-file-chooser</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Elastic Java File Chooser</name>
+	<description>Elastic Business ElasticJavaFileChooser</description>
+
+	<organization>
+		<name>Imatia Innovation S.L.</name>
+		<url>http://www.imatia.com</url>
+	</organization>
+
+	<modules>
+		<module>elastic-java-file-chooser-client</module>
+		<module>elastic-java-file-chooser-server</module>
+		<module>elastic-java-file-chooser-commons</module>
+		<module>elastic-java-file-chooser-jws</module>
+		<module>elastic-java-file-chooser-war</module>
+	</modules>
+
+	<scm>
+		<connection>
+			scm:svn:https://svn.imatia.com/elastic/elastic-java-file-chooser/trunk</connection>
+		<developerConnection>
+			scm:svn:https://svn.imatia.com/elastic/elastic-java-file-chooser/trunk</developerConnection>
+		<url>https://svn.imatia.com/elastic/elastic-java-file-chooser/</url>
+	</scm>
+
+	<properties>
+		<!-- APP -->
+		<app.name>Elastic Business ElasticJavaFileChooser</app.name>
+
+		<!-- WAR -->
+		<project.build.finalName>elastic</project.build.finalName>
+
+		<!-- Maven -->
+		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
+		<timestamp>${maven.build.timestamp}</timestamp>
+
+		<!-- Enconding -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- Version plugins -->
+		<maven.jar.plugin.version>2.5</maven.jar.plugin.version>
+		<maven.compiler.plugin.version>3.2</maven.compiler.plugin.version>
+		<maven.source.plugin.version>2.4</maven.source.plugin.version>
+		<mave.assembly.plugin.version>2.5.1</mave.assembly.plugin.version>
+		<maven.resources.plugin.version>2.6</maven.resources.plugin.version>
+		<imatia.webstart.plugin.version>1.0-beta-6.2</imatia.webstart.plugin.version>
+		<maven.war.plugin.version>2.5</maven.war.plugin.version>
+		<maven.deploy.plugin.version>2.8.2</maven.deploy.plugin.version>
+		<maven.ear.plugin.version>2.9.1</maven.ear.plugin.version>
+		<maven.nativedependencies.plugin.version>0.0.7</maven.nativedependencies.plugin.version>
+		<maven.dependency.plugin.version>2.9</maven.dependency.plugin.version>
+		<properties.maven.plugin.version>1.0-alpha-2</properties.maven.plugin.version>
+		<maven.antrun.plugin.version>1.7</maven.antrun.plugin.version>
+		<maven.release.plugin.version>2.5.3</maven.release.plugin.version>
+
+		<!-- Manifest -->
+		<manifest.built.by>Imatia Innovation S.L.</manifest.built.by>
+
+		<!-- Java -->
+		<jdk.version>1.8</jdk.version>
+
+		<!-- Jars -->
+		<elastic.core.version>16.14.5</elastic.core.version>
+		<servlet.version>3.1.0</servlet.version>
+
+		<!-- jnlp.properties -->
+		<tomcat.ip>${server.hostname}</tomcat.ip>
+		<jnlp.codebase>
+			http://${tomcat.ip}:${tomcat.port}/${tomcat.app.name}/webstart</jnlp.codebase>
+		<jnlp.vendor>Imatia Innovation S.L.</jnlp.vendor>
+		<jnlp.homepage.href>http://www.elastic-business.com</jnlp.homepage.href>
+		<jnlp.icon.href>images/elastic.ico</jnlp.icon.href>
+		<jnlp.icon.shortcut>images/elastic.ico</jnlp.icon.shortcut>
+		<jnlp.splash>images/imatia_splash.gif</jnlp.splash>
+		<jnlp.submenu>Elastic Business</jnlp.submenu>
+		<jnlp.rmi.cgipath>/${tomcat.app.name}/rmi</jnlp.rmi.cgipath>
+		<jnlp.rmi.port>${tomcat.port}</jnlp.rmi.port>
+		<jnlp.rmi.debug>false</jnlp.rmi.debug>
+		<jnlp.mainclass>com.imatia.elastic.cliente.ElasticSpecificLauncher</jnlp.mainclass>
+		<jnlp.labels>com/imatia/elastic/cliente/labelsspecific.xml</jnlp.labels>
+		<jnlp.clientapplication>com/imatia/elastic/cliente/clientapplication.xml</jnlp.clientapplication>
+		<jnlp.protocol>${rmi.protocol}</jnlp.protocol>
+		<jnlp.file.name>APPLICATION.jnlp</jnlp.file.name>
+		<jnlp.input.template>APPLICATION.vm</jnlp.input.template>
+		<jnlp.input.template.template>APPLICATION_template.vm</jnlp.input.template.template>
+		<jnlp.java.initial.heap>128m</jnlp.java.initial.heap>
+		<jnlp.java.max.heap>1024m</jnlp.java.max.heap>
+		<jnlp.argument.cgipath>${cgi.path}</jnlp.argument.cgipath>
+		<jnlp.argument.rmiport>${rmi.port}</jnlp.argument.rmiport>
+		<jnlp.argument.rmidebug>${rmi.debug}</jnlp.argument.rmidebug>
+		<jnlp.java.vm.args>-Dfile.encoding=utf-8 -XX:MinHeapFreeRatio=15
+			-XX:MaxHeapFreeRatio=30 -XX:+HeapDumpOnOutOfMemoryError
+			-XX:+UseGCOverheadLimit -XX:+UseG1GC -XX:+UseStringDeduplication</jnlp.java.vm.args>
+
+		<!-- Sign -->
+<!--		<sign.server.url>http://10.7.0.20:8079/RemoteJarSigner/SignerServlet</sign.server.url>-->
+		<sign.server.url>https://codesign.imatia.com/javasign/RemoteJarSigner/SignerServlet</sign.server.url>
+		
+		<sign.application.name>Elastic Java File Chooser</sign.application.name>
+
+	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>imatia-artifactory</id>
+			<name>libs-release-local</name>
+			<url>https://artifactory.imatia.com/artifactory/libs-imatia-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>imatia-snapshots</id>
+			<name>libs-snapshot-local</name>
+			<url>https://artifactory.imatia.com/artifactory/libs-snapshot-local</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<profiles>
+		<profile>
+			<id>develop</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<externalfile.pom.properties>pom_develop.properties</externalfile.pom.properties>
+			</properties>
+		</profile>
+		<profile>
+			<id>production</id>
+			<properties>
+				<externalfile.pom.properties>pom_production.properties</externalfile.pom.properties>
+			</properties>
+		</profile>
+	</profiles>
+
+
+	<build>
+		<!-- =========================================================== -->
+		<!-- Plugins -->
+		<!-- =========================================================== -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>${mave.assembly.plugin.version}</version>
+				</plugin>
+				<!-- Resources plugin (2.4.x versions do not correctly filter
+               files containing '@' character). -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${maven.resources.plugin.version}</version>
+					<configuration>
+						<nonFilteredFileExtensions>
+							<nonFilteredFileExtension>ttf</nonFilteredFileExtension>
+							<nonFilteredFileExtension>TTF</nonFilteredFileExtension>
+							<nonFilteredFileExtension>otf</nonFilteredFileExtension>
+							<nonFilteredFileExtension>dat</nonFilteredFileExtension>
+							<nonFilteredFileExtension>docx</nonFilteredFileExtension>
+						</nonFilteredFileExtensions>
+					</configuration>
+				</plugin>
+				<!-- Compiler configuration -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven.compiler.plugin.version}</version>
+					<configuration>
+						<verbose>true</verbose>
+						<source>${jdk.version}</source>
+						<target>${jdk.version}</target>
+						<encoding>${project.build.sourceEncoding}</encoding>
+					</configuration>
+				</plugin>
+				<!-- Generated zip for jnlp -->
+				<plugin>
+					<groupId>com.imatia.maven.plugin</groupId>
+					<artifactId>imatia-webstart-plugin</artifactId>
+					<version>${imatia.webstart.plugin.version}</version>
+				</plugin>
+				<!-- Generate war -->
+				<plugin>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>${maven.war.plugin.version}</version>
+					<configuration>
+						<packagingExcludes>WEB-INF/lib/servlet-api*.jar</packagingExcludes>
+					</configuration>
+				</plugin>
+
+				<!-- Evitar el despliegue de los WAR en el repositorio
+				corporativo -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>${maven.deploy.plugin.version}</version>
+				</plugin>
+				<!-- Generate ear -->
+				<plugin>
+					<artifactId>maven-ear-plugin</artifactId>
+					<version>${maven.ear.plugin.version}</version>
+				</plugin>
+				<!-- dependencias -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>${maven.dependency.plugin.version}</version>
+				</plugin>
+				<!-- external properties -->
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>properties-maven-plugin</artifactId>
+					<version>${properties.maven.plugin.version}</version>
+					<executions>
+						<execution>
+							<phase>initialize</phase>
+							<goals>
+								<goal>read-project-properties</goal>
+							</goals>
+							<configuration>
+								<files>
+									<file>${externalfile.pom.properties}</file>
+									<file>../${externalfile.pom.properties}</file>
+								</files>
+								<quiet>true</quiet>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				<!--This plugin's configuration is used to store Eclipse m2e
+               settings only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.codehaus.mojo</groupId>
+										<artifactId>properties-maven-plugin</artifactId>
+										<versionRange>[1.0-alpha-2,)</versionRange>
+										<goals>
+											<goal>read-project-properties</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute>
+											<runOnIncremental>true</runOnIncremental>
+										</execute>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>${maven.antrun.plugin.version}</version>
+				</plugin>
+				<!-- Source -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>${maven.source.plugin.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>properties-maven-plugin</artifactId>
+			</plugin>
+
+			<!-- Manifest -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>${maven.jar.plugin.version}</version>
+				<configuration>
+					<archive>
+						<addMavenDescriptor>false</addMavenDescriptor>
+						<manifest>
+							<mainClass>${manifest.main.class}</mainClass>
+						</manifest>
+						<manifestEntries>
+							<Built-By>${manifest.built.by}</Built-By>
+							<Version-number>${project.version}</Version-number>
+							<Version-date>${maven.build.timestamp}</Version-date>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<!-- No quitar, sino no funciona Jenkins -->
+				<version>${maven.release.plugin.version}</version>
+				<configuration>
+					<allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+					<checkModificationExcludes>
+						<checkModificationExclude>pom.xml</checkModificationExclude>
+						<checkModificationExclude>pom.xml.versionsBackup</checkModificationExclude>
+					</checkModificationExcludes>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.imatia.elastic</groupId>
+				<artifactId>elastic-java-file-chooser-client</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.imatia.elastic</groupId>
+				<artifactId>elastic-java-file-chooser-commons</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.imatia.elastic</groupId>
+				<artifactId>elastic-java-file-chooser-server</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.imatia.elastic</groupId>
+				<artifactId>elastic-java-file-chooser-jws</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>${servlet.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.7.5</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
