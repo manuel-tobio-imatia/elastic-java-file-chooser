@@ -35,6 +35,7 @@ public class AppMainPanel extends JFrame {
 	public JPanel mainPanel;
 
 	public JFileChooser fileChooser;
+	public JFileChooser fileChooser2;
 
 	protected boolean synchronize = true;
 
@@ -73,7 +74,7 @@ public class AppMainPanel extends JFrame {
 
 		this.addComponents();
 
-		this.mainPanel.setPreferredSize(new Dimension(500, 200));
+		this.mainPanel.setPreferredSize(new Dimension(700, 200));
 		this.pack();
 
 		this.addIconImage();
@@ -101,8 +102,6 @@ public class AppMainPanel extends JFrame {
 
 		JMenuBar menubar = this.createMenuBar();
 
-		this.fileChooser = this.createFileChooserPanel();
-
 		JButton buttonChooseFile = new JButton();
 		buttonChooseFile.setText("Seleccionar fichero");
 		buttonChooseFile.addActionListener(ve -> this.doActionChooseFile(null));
@@ -111,12 +110,17 @@ public class AppMainPanel extends JFrame {
 		buttonChooseFile2.setText("Seleccionar fichero desde C:\\");
 		buttonChooseFile2.addActionListener(ve -> this.doActionChooseFile(new File("C:\\")));
 
+		JButton buttonChooseFile3 = new JButton();
+		buttonChooseFile3.setText("Seleccionar fichero btn3");
+		buttonChooseFile3.addActionListener(ve -> this.doActionDefaultChooseFile(null));
+
 		JPanel fileChooserPanel = new JPanel(new GridBagLayout());
 		GridBagConstraints gc = new GridBagConstraints();
 
 		gc.insets = new Insets(0, 0, 0, 20);
 		fileChooserPanel.add(buttonChooseFile, gc);
 		fileChooserPanel.add(buttonChooseFile2, gc);
+		fileChooserPanel.add(buttonChooseFile3, gc);
 
 		this.mainPanel = new JPanel();
 		this.mainPanel.setLayout(new GridLayout());
@@ -140,6 +144,46 @@ public class AppMainPanel extends JFrame {
 			this.fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
 		}
 		return this.fileChooser;
+	}
+
+	protected void doActionDefaultChooseFile(File currentDirToOpen) {
+
+		if (this.fileChooser2 == null) {
+			this.fileChooser2 = new JFileChooser();
+			this.fileChooser2.setFileSelectionMode(JFileChooser.FILES_ONLY);
+
+		}
+		if (currentDirToOpen != null) {
+			if (currentDirToOpen.isDirectory()) {
+				this.fileChooser2.setCurrentDirectory(currentDirToOpen);
+			} else {
+				this.fileChooser2.setCurrentDirectory(currentDirToOpen.getParentFile());
+			}
+		} else {
+			if (AppMainPanel.lastDirectory != null) {
+				if (AppMainPanel.lastDirectory.isDirectory()) {
+					this.fileChooser2.setCurrentDirectory(AppMainPanel.lastDirectory);
+				} else {
+					this.fileChooser2.setCurrentDirectory(AppMainPanel.lastDirectory.getParentFile());
+				}
+			}
+		}
+
+		File fSel = null;
+		File[] fil = null;
+		if (this.synchronize) {
+			this.fileChooser2.setMultiSelectionEnabled(false);
+		} else {
+			this.fileChooser2.setMultiSelectionEnabled(true);
+		}
+		int option = this.fileChooser2.showOpenDialog(this.getParent());
+		AppMainPanel.lastDirectory = this.fileChooser2.getCurrentDirectory();
+		if (option != JFileChooser.APPROVE_OPTION) {
+			return;
+		}
+		fSel = this.fileChooser2.getSelectedFile();
+		fil = this.fileChooser2.getSelectedFiles();
+
 	}
 
 	protected void doActionChooseFile(File currentDirToOpen) {

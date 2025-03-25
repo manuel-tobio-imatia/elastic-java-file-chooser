@@ -14,7 +14,7 @@ public class CustomFileChooser extends JFileChooser {
 	private static final Logger logger = LoggerFactory.getLogger(CustomFileChooser.class);
 
 	public CustomFileChooser() {
-		// Empty
+		super();
 	}
 
 	protected boolean isLNK(File f) {
